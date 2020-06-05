@@ -5,7 +5,7 @@ const QuestionsList: React.FC = () => {
 
   return (
     <div>
-      QuestionsList Component
+      <p>QuestionsList Component</p>
     </div>
   );
 }
