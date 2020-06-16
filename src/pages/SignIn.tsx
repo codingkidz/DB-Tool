@@ -10,11 +10,11 @@ export const SignIn: React.FC<Props> = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (process.env.NODE_ENV !== "production") {
-      console.log("Loaded Login");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (process.env.NODE_ENV !== "production") {
+  //     console.log("Loaded Login");
+  //   }
+  // }, []);
 
   const handleSubmit = (event: React.MouseEvent) => {
     event.preventDefault();

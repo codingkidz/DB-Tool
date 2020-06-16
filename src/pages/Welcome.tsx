@@ -4,17 +4,17 @@ import { signOut } from "../services/firebase";
 
 interface Props extends RouteComponentProps { }
 
- export const Welcome: React.FC<Props> = () => {
+export const Welcome: React.FC<Props> = () => {
     const navigate = useNavigate();
 
-    const signOut = async () => {
-        await signOut().then(() => console.log("signed out"));
+    const logOut = () => {
+        signOut().then(() => console.log("signed out"));
     };
 
     return (
         <div>
             <p>Login successful</p>
-            <button onClick={signOut}>Logout</button>
+            <button onClick={logOut}>Logout</button>
         </div>
     );
 }
