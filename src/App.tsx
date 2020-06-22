@@ -8,6 +8,9 @@ import { Router } from "@reach/router";
 import {Welcome as LandingPage} from './pages/Welcome';
 import {SignIn as LoginPage} from './pages/SignIn';
 
+import { Units } from './pages/UnitPage';
+
+
 
 const App: React.FC = () => {
 
@@ -41,6 +44,7 @@ const App: React.FC = () => {
     user ? (
       <Router>
         <LandingPage path="/" default />
+        <Units path="/units" />
       </Router>
     ) : (
         <Router>
