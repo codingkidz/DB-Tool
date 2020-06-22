@@ -5,10 +5,11 @@ import QuestionHeader from './components/QuestionHeader';
 import { auth } from './services/firebase'
 import { Router } from "@reach/router";
 
-import {Welcome as LandingPage} from './pages/Welcome';
-import {SignIn as LoginPage} from './pages/SignIn';
+import { Welcome as LandingPage } from './pages/Welcome';
+import { SignIn as LoginPage } from './pages/SignIn';
 
 import { Units } from './pages/UnitPage';
+import { Quiz } from './pages/Quiz';
 
 
 
@@ -45,6 +46,7 @@ const App: React.FC = () => {
       <Router>
         <LandingPage path="/" default />
         <Units path="/units" />
+        <Quiz path="/quiz/:unit" />
       </Router>
     ) : (
         <Router>

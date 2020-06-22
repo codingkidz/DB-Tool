@@ -11,10 +11,17 @@ export const Welcome: React.FC<Props> = () => {
         signOut().then(() => console.log("signed out"));
     };
 
+    const goToUnits = () => {
+            navigate('/units');
+            console.log('tried to navigate to /units')
+    }
+
     return (
         <div>
             <p>Login successful</p>
             <button onClick={logOut}>Logout</button>
+            <br></br>
+            <button onClick={goToUnits}>View Units</button>
         </div>
     );
 }

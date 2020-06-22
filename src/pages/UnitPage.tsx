@@ -5,8 +5,6 @@ import { Unit } from "../models/Unit";
 
 interface Props extends RouteComponentProps {}
 
-
-
 // interface Question {
 //     id: string;
 //     question: string;
@@ -23,9 +21,9 @@ export const Units: React.FC<Props> = () => {
     fetchUnits();
   }, []);
 
-//   const goToUnitQuiz = (unit: string) => {
-//     navigate(`/quiz/${unit}`)
-//   }
+  const goToUnitQuiz = (unit: string) => {
+    navigate(`/quiz/${unit}`)
+  }
 
   const fetchUnits = async () => {
     let tempUnit: Unit;
@@ -48,7 +46,7 @@ export const Units: React.FC<Props> = () => {
   return units ?  (
     <ul>
       {units.map((unit) => {
-        return <button onClick={() => console.log(unit.id)}>{unit.topic}</button>;
+        return <button onClick={() => goToUnitQuiz(unit.id)}>{unit.topic}</button>;
       })}
     </ul>
   ) : (
