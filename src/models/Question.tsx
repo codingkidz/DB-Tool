@@ -1,4 +1,4 @@
-import {Promise} from 'es6-promise'
+
 
 export interface Question {
     id: string;

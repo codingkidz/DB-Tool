@@ -5,12 +5,6 @@ import { Unit } from "../models/Unit";
 
 interface Props extends RouteComponentProps {}
 
-// interface Question {
-//     id: string;
-//     question: string;
-//     correct_answer: string;
-//     wrong_answers: string[];
-//   }
 
 export const Units: React.FC<Props> = () => {
   const [units, setUnits] = useState<Unit[]>();
