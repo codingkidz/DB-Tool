@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 
-import { Promise } from 'es6-promise'
-
-
 import { RouteComponentProps, useNavigate } from "@reach/router";
 
 import { db } from "../services/firebase";
 
 import { Question } from "../models/Question";
-import { render } from "react-dom";
+
 
 interface Props extends RouteComponentProps {
     unit?: string
