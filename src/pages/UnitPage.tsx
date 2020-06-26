@@ -19,6 +19,10 @@ export const Units: React.FC<Props> = () => {
     navigate(`/quiz/${unit}`)
   }
 
+  const goToUploadPage = () => {
+    navigate('/upload')
+  }
+
   const fetchUnits = async () => {
     let tempUnit: Unit;
     let tempUnits: Unit[] = [];
@@ -38,7 +42,9 @@ export const Units: React.FC<Props> = () => {
   };
 
   return units ?  (
+   
     <ul>
+       <button onClick={() => goToUploadPage()}>Add Unit</button>
       {units.map((unit) => {
         return <button onClick={() => goToUnitQuiz(unit.id)}>{unit.topic}</button>;
       })}

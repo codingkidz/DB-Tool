@@ -10,6 +10,7 @@ import { SignIn as LoginPage } from './pages/SignIn';
 
 import { Units } from './pages/UnitPage';
 import { Quiz } from './pages/Quiz';
+import {UploadPage} from './pages/UploadPage';
 
 
 
@@ -47,6 +48,7 @@ const App: React.FC = () => {
         <LandingPage path="/" default />
         <Units path="/units" />
         <Quiz path="/quiz/:unit" />
+        <UploadPage path="/upload" />
       </Router>
     ) : (
         <Router>
