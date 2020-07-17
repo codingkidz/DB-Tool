@@ -20,9 +20,7 @@ export const UploadPage: React.FC<Props> = () => {
             .add({data})
     }
 
-
     return (
-
         <button onClick={pushUnit}>push unit</button>
     )
 }
